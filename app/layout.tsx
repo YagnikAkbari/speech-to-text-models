@@ -27,10 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <Head> */}
-      <link
+      {/* <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      />
+      /> */}
       {/* </Head> */}
       <Script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js" />
       <body
