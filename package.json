@@ -10,6 +10,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.34.0",
+    "@elevenlabs/react": "^0.14.0",
     "@picovoice/porcupine-react": "^4.0.0",
     "@picovoice/porcupine-web": "^4.0.0",
     "@picovoice/web-voice-processor": "^4.0.9",
