@@ -4,11 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "picovoice:dev": "node scripts/run_demo.js",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.34.0",
+    "@elevenlabs/react": "^0.14.0",
+    "@picovoice/porcupine-react": "^4.0.0",
+    "@picovoice/porcupine-web": "^4.0.0",
+    "@picovoice/web-voice-processor": "^4.0.9",
     "next": "16.1.4",
     "react": "19.2.3",
     "react-dom": "19.2.3",

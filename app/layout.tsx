@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Script from "next/script";
 import Head from "next/head";
@@ -27,15 +28,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <Head> */}
-      <link
+      {/* <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      />
+      /> */}
       {/* </Head> */}
       <Script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
