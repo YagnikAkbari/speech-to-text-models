@@ -2,9 +2,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const WhisperFastApiPage = () => {
-  const wsRef = useRef(null);
-  const recorderRef = useRef(null);
-  const streamRef = useRef(null);
+  const wsRef: any = useRef(null);
+  const recorderRef: any = useRef(null);
+  const streamRef: any = useRef(null);
 
   const [isRecording, setIsRecording] = useState(false);
 
@@ -12,10 +12,10 @@ const WhisperFastApiPage = () => {
     if (isRecording) return;
 
     // open websocket
-    const ws = new WebSocket("ws://localhost:8000/ws/stt");
+    const ws: any = new WebSocket("ws://localhost:8000/ws/stt");
     wsRef.current = ws;
 
-    ws.onmessage = (e) => {
+    ws.onmessage = (e: any) => {
       console.log("Transcript:", e.data);
     };
 
@@ -56,7 +56,7 @@ const WhisperFastApiPage = () => {
     recorderRef.current?.stop();
 
     // stop mic tracks
-    streamRef.current?.getTracks().forEach((track) => track.stop());
+    streamRef.current?.getTracks().forEach((track: any) => track.stop());
 
     // close websocket
     wsRef.current?.close();

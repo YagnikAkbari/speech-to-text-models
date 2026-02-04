@@ -9,7 +9,7 @@ export default function VoskSTT() {
   const [transcript, setTranscript] = useState("");
 
   const audioContextRef = useRef<AudioContext | null>(null);
-  const recognizerRef = useRef<unknown>(null);
+  const recognizerRef = useRef<any>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const sourceRef = useRef<MediaStreamAudioSourceNode | null>(null);
   const workletRef = useRef<AudioWorkletNode | null>(null);
@@ -94,7 +94,7 @@ export default function VoskSTT() {
             length: floatData.length,
           };
 
-          recognizerRef.current.acceptWaveform(fakeBuffer);
+          recognizerRef.current?.acceptWaveform(fakeBuffer);
         } catch (err) {
           console.error("Fake AudioBuffer attempt failed:", err);
         }

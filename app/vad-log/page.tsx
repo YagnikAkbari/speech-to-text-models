@@ -1,8 +1,8 @@
 "use client";
 
 const VADLog = () => {
-  let stream;
-  let mediaRecorder;
+  let stream: any;
+  let mediaRecorder: any;
   let chunks = [];
   let speaking = false;
 
@@ -11,7 +11,7 @@ const VADLog = () => {
 
     mediaRecorder = new MediaRecorder(stream, { mimeType: "audio/webm" });
 
-    mediaRecorder.ondataavailable = (e) => {
+    mediaRecorder.ondataavailable = (e: any) => {
       if (e.data.size > 0) {
         console.log("🎧 Blob chunk:", e.data);
         // Here you can send it to server or save
@@ -67,7 +67,7 @@ const VADLog = () => {
       mediaRecorder.stop();
     }
     if (stream) {
-      stream.getTracks().forEach((t) => t.stop());
+      stream.getTracks().forEach((t: any) => t.stop());
     }
     console.log("🛑 Mic stopped");
   }
